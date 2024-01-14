@@ -5,7 +5,7 @@ const userScorepara = document.querySelector("#user-score");
 const compScorepara = document.querySelector("#comp-score");
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
-const msg1=document.querySelector("#msg1")
+// const msg1=document.querySelector("#msg1")
 const genCompChoice = () => {
   const options = ["rock", "scissors", "paper"];
   const randomIndex = Math.floor(Math.random() * 3);
@@ -32,27 +32,22 @@ const showWinnner = (userWin, userChoice, compChoice) => {
     msg.style.backgroundColor = "red";
   }
 };
-function hide() {
-  document.getElementById('msg').style.display='none';
-}
+
 const declareWinner = (userScore, compScore) => {
   if (userScore === 5) {
     // userScorepara.innerText=userScore
     // console.log("You Win");
-    msg1.innerText = `Congratulations😍 You Defeated Comp`;
-    msg1.style.backgroundColor = "green";
+    msg.innerText = `Congratulations😍 You Defeated Comp`;
+    msg.style.backgroundColor = "green";
     winner= true;
-    hide();
   } else if (compScore === 5) {
-    msg1.innerText = `You Lost😶‍🌫️ Comp defeated you`;
-    msg1.style.backgroundColor = "red";
+    msg.innerText = `You Lost😶‍🌫️ Comp defeated you`;
+    msg.style.backgroundColor = "red";
     winner= true;
-    hide();
   } else if(userScore===5 && compScore===5) {
-    msg1.innerText = "the match is draw";
-    msg1.style.backgroundColor = "#081b31";
+    msg.innerText = "the match is draw";
+    msg.style.backgroundColor = "#081b31";
     winner= true;
-    hide();
   }
   else{
 
