@@ -15,7 +15,7 @@ Welcome to the Rock, Paper, Scissors Game! This simple and classic game is imple
 User vs Computer: Challenge the computer in a game of Rock, Paper, Scissors.
 Score Tracking: Keep track of your wins, losses, and ties.
 <br/>
-<h2>Technologies Used</h2>
+<h2>Languages Used</h2>
 HTML<br/>
 CSS<br/>
 JavaScript<br/>
