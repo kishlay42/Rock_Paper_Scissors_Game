@@ -1,6 +1,6 @@
 let userScore = 0;
 let compScore = 0;
-let winner= false;
+let winner = false;
 const userScorepara = document.querySelector("#user-score");
 const compScorepara = document.querySelector("#comp-score");
 const choices = document.querySelectorAll(".choice");
@@ -38,19 +38,13 @@ const declareWinner = (userScore, compScore) => {
     // userScorepara.innerText=userScore
     // console.log("You Win");
     msg.innerText = `Congratulations😍 You Defeated Comp`;
-    msg.style.backgroundColor = "green";
-    winner= true;
+    msg.style.backgroundImage = "linear-gradient(to bottom right,green, yellow)";
+    winner = true;
   } else if (compScore === 5) {
     msg.innerText = `You Lost😶‍🌫️ Comp defeated you`;
-    msg.style.backgroundColor = "red";
-    winner= true;
-  } else if(userScore===5 && compScore===5) {
-    msg.innerText = "the match is draw";
-    msg.style.backgroundColor = "#081b31";
-    winner= true;
-  }
-  else{
-
+    msg.style.backgroundImage = "linear-gradient(to bottom right,red, #081b31)";
+    winner = true;
+  }else {
   }
 };
 const playGame = (userChoice) => {
@@ -70,14 +64,14 @@ const playGame = (userChoice) => {
     }
     showWinnner(userWin, userChoice, compChoice);
   }
-  declareWinner(userScore,compScore)
+  declareWinner(userScore, compScore);
 };
 choices.forEach((choice) => {
   choice.addEventListener("click", () => {
     const userChoice = choice.getAttribute("id");
     // console.log("choice was clicked", userChoice);
-    if(!winner){
-    playGame(userChoice);
+    if (!winner) {
+      playGame(userChoice);
     }
   });
 });
